@@ -1,0 +1,6 @@
+#!/bin/sh
+MSG=$(cat "$1")
+if ! echo "$MSG" | grep -qE "^(feat|fix|art|sound|style|refactor|balance|story|docs|chore|delete)(\([a-z0-9-]+\))?!?: .+"; then
+  echo "Invalid commit message format. Use: feat, fix, art, sound, style, refactor, balance, story, docs, chore, or delete (e.g. 'feat(api)!: add card logic')"
+  exit 1
+fi
