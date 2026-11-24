@@ -4,6 +4,7 @@
 div {
     width: 100%;
     position: absolute;
+    width: fit-content;
 }
 
 #normal-bush1 {
