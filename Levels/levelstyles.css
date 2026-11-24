@@ -3,10 +3,39 @@
 
 div {
     width: 100%;
+    position: absolute;
 }
 
 #normal-bush1 {
-    position: absolute;
     top: 60%;
     left: 10%;
+}
+
+.bushes img {
+    width: 300px;
+    height: auto;
+}
+
+#normal-bush2 {
+    top: 50%;
+    left: 55%;
+}
+
+#berry-basket img {
+    width: 150px;
+}
+
+#bear-bush {
+    top: 3%;
+    left: 30%;
+}
+
+#arrow {
+    left: 80%;
+    top: 80%;
+}
+
+main {
+    background-image: url("../img/level1_background.jpg");
+    background-size: cover;
 }
