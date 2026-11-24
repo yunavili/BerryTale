@@ -7,6 +7,10 @@ div {
     width: fit-content;
 }
 
+img:hover {
+    transform: scale(1.1,1.1);
+}
+
 #normal-bush1 {
     top: 60%;
     left: 10%;
@@ -32,8 +36,16 @@ div {
 }
 
 #arrow {
-    left: 80%;
-    top: 80%;
+    left: 84%;
+    top: 84%;
+}
+
+#arrow img {
+    width: 150px;
+}
+
+#arrow img:hover {
+    content: url("../img/arrow_hover.png")
 }
 
 main {
