@@ -42,6 +42,13 @@ function loadlevel(levelNumber) {
                 add_to_the_basket(1);
             
             }, { once: true });
+        } 
+
+        if (element.action == "arrow") {
+            gameObject.addEventListener("click", function (evt) {
+                currentLevel += 1;
+                loadlevel(currentLevel);
+            }, {once: true})
         }
 
         main.appendChild(gameObject); // adding the element to main
