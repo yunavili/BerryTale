@@ -1,0 +1,22 @@
+/* Only the top level changes here, create your own stylesheet for specifig features */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+main {
+    position: relative;
+    display: flex;
+    width: 1000px;
+    height: 650px;
+    border: 2px solid red; /* Colors just for the clearer view, can be removed later*/
+    background-color: antiquewhite;
+    overflow: hidden;
+}

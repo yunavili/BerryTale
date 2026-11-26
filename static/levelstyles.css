@@ -49,6 +49,6 @@ img:hover {
 }
 
 main {
-    background-image: url("../img/level1_background.jpg");
+    background-image: url("../img/level1/level1_background.jpg");
     background-size: cover;
 }
