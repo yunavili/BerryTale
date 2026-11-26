@@ -20,30 +20,22 @@ function loadlevel(levelNumber) {
         gameObject.appendChild(art)
 
         // add the click functions to the elements
-        if (gameObject.id == "normal-bush1") {
+        if (element.action == "empty"){ // actions set in levels.js
             gameObject.addEventListener("click", function (evt) {
                 const img = gameObject.querySelector("img");
-                img.src = "/img/level1/bush1_empty.png";
+                img.src = element.emptyImage;
                 add_to_the_basket(1);
             }, {once: true});
         }
-
-        if (gameObject.id == "normal-bush2") {
-            gameObject.addEventListener("click", function (evt) {
-                const img = gameObject.querySelector("img");
-                img.src = "/img/level1/bush2_empty.png";
-                add_to_the_basket(1);
-            }, { once: true});
-        }
  
-        if (gameObject.id == "bear-bush") {
+        if (element.action == "bear") {
             gameObject.addEventListener("click", function (evt) {
                 const img = gameObject.querySelector("img");
-                img.src = "/img/level1/bush3_empty.png";
+                img.src = element.emptyImage;
 
                 // creating bear
                 const bear = document.createElement("img")
-                bear.src = "/img/level1/bear.png";
+                bear.src = element.bearImage;   
                 bear.id = "bear";
                 gameObject.appendChild(bear);
                 /// bear event here !!
@@ -52,7 +44,7 @@ function loadlevel(levelNumber) {
             }, { once: true });
         }
 
-        main.appendChild(gameObject);
+        main.appendChild(gameObject); // adding the element to main
         
     };
 };

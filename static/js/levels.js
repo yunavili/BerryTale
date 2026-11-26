@@ -6,25 +6,33 @@ const levels = {
             {
                 id: "normal-bush1",
                 className: "bushes",
-                image: "../img/level1//bush1.png",
+                image: "../img/level1//bush1.png", // default image
+                emptyImage: "../img/level1/bush1_empty.png", // image after click
                 alt: "bush",    
+                action: "empty"
             },
             {
                 id: "normal-bush2",
                 className: "bushes",
                 image: "../img/level1/bush2.png",
-                alt: "bush"
+                emptyImage: "../img/level1/bush2_empty.png",
+                alt: "bush",
+                action: "empty"
             },
             {
                 id: "bear-bush",
                 className: "bushes",
                 image: "../img/level1/bush3.png",
-                alt: "bush with bear"
+                emptyImage: "../img/level1/bush3_empty.png",
+                bearImage: "../img/level1/bear.png",
+                alt: "suspicious bush",
+                action: "bear"
             },
             {
                 id: "arrow",
                 image: "../img/arrow.png",
-                alt: "arrow"
+                alt: "arrow",
+                action: "arrow"
             },
             {
                 id: "berry-basket",
@@ -36,6 +44,12 @@ const levels = {
                 image: "../img/level1/sun.png",
                 alt: "sun"
             }
+        ]
+    },
+
+    2: {
+        elements: [
+
         ]
     }
 };
