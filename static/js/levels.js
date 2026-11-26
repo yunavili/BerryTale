@@ -7,7 +7,7 @@ const levels = {
                 id: "normal-bush1",
                 className: "bushes",
                 image: "../img/level1//bush1.png",
-                alt: "bush",
+                alt: "bush",    
             },
             {
                 id: "normal-bush2",
@@ -30,6 +30,11 @@ const levels = {
                 id: "berry-basket",
                 image: "../img/basket_empty.png",
                 alt: "berry-basket"
+            },
+            {
+                id: "sun",
+                image: "../img/level1/sun.png",
+                alt: "sun"
             }
         ]
     }

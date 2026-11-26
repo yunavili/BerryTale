@@ -60,6 +60,16 @@ img:hover {
     }
 }
 
+#sun {
+    top: -10%;
+    left: 80%;
+    width: 20px;
+}
+
+#sun img {
+    width: 300px;
+}
+
 #arrow {
     left: 84%;
     top: 84%;
