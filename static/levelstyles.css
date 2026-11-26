@@ -1,11 +1,39 @@
-
-/* Level 1 */
+main {
+    background-size: cover;
+}
 
 div {
     width: 100%;
     position: absolute;
     width: fit-content;
 }
+
+/* common elements */
+
+#sun {
+    top: -10%;
+    left: 80%;
+    width: 20px;
+}
+
+#sun img {
+    width: 300px;
+}
+
+#arrow {
+    left: 84%;
+    top: 84%;
+}
+
+#arrow img {
+    width: 150px;
+}
+
+#arrow img:hover {
+    content: url("../img/arrow_hover.png")
+}
+
+/* Level 1 */
 
 img:hover {
     transform: scale(1.1,1.1);
@@ -60,30 +88,22 @@ img:hover {
     }
 }
 
-#sun {
-    top: -10%;
-    left: 80%;
-    width: 20px;
+/* Level 2 */
+
+#river-bush1 {
+    top: 10%;
+    left: 20%;
 }
 
-#sun img {
-    width: 300px;
+#river-bush2 {
+    left: 50%;
 }
 
-#arrow {
-    left: 84%;
-    top: 84%;
+#river-bush3 {
+    left: 50%;
+    top: 60%;
 }
 
-#arrow img {
-    width: 150px;
-}
-
-#arrow img:hover {
-    content: url("../img/arrow_hover.png")
-}
-
-main {
-    background-image: url("../img/level1/level1_background.jpg");
-    background-size: cover;
+#river {
+    top: 40%;
 }

@@ -2,9 +2,12 @@
 
 // loads the new level, without need of changing the html file. Reads the new level elements from levels.js
 function loadlevel(levelNumber) {
+
     const allElements = [...commonElements, ...levels[levelNumber].elements]; // from levels.js
     const main = document.querySelector("main");
     main.innerHTML = ""; // clears the main page before creating new objects
+
+    main.style.backgroundImage = `url("${levels[levelNumber].background}")`
 
     // for loop that creates every element of the level
     for (let i = 0; i < allElements.length; i++) {
