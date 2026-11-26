@@ -22,8 +22,8 @@ img:hover {
 }
 
 #normal-bush2 {
-    top: 50%;
-    left: 55%;
+    top: 3%;
+    left: 30%;
 }
 
 #berry-basket img {
@@ -31,8 +31,33 @@ img:hover {
 }
 
 #bear-bush {
-    top: 3%;
-    left: 30%;
+    top: 50%;
+    left: 55%;
+}
+
+/* the bush image, this makes it to be top of the bear image*/
+#bear-bush img:first-child{ 
+    position: relative;
+    z-index: 2;
+}
+
+#bear {
+    position: absolute;
+    top: -100px;
+    left: 100px; 
+    width: 200px;
+    animation: appear 0.5s ease;    
+    z-index: 1;
+}
+
+/* Makes the bear appear */
+@keyframes appear {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 #arrow {
