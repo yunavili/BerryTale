@@ -2,13 +2,13 @@
 
 // loads the new level, without need of changing the html file. Reads the new level elements from levels.js
 function loadlevel(levelNumber) {
-    const level = levels[levelNumber]; // -> levels.js
+    const allElements = [...commonElements, ...levels[levelNumber].elements]; // from levels.js
     const main = document.querySelector("main");
     main.innerHTML = ""; // clears the main page before creating new objects
 
     // for loop that creates every element of the level
-    for (let i = 0; i < level.elements.length; i++) {
-        const element = level.elements[i];
+    for (let i = 0; i < allElements.length; i++) {
+        const element = allElements[i];
         const gameObject = document.createElement("div");
         gameObject.id = element.id;
         gameObject.className = element.className;
