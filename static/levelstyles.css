@@ -136,12 +136,43 @@ img:hover {
 }
 
 #ukko {
+    display: flex;
     left: 30%;
     top: 30%;
+    justify-content: center;
+    align-items: center;
 }
 
 #ukko img {
     width: 200px;
+}
+
+#dialog-box {
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+    left: 50%;
+}
+
+.dialog { 
+    width: 90%;
+    color: rgb(111, 107, 107);
+    border: 3px solid #365a3b;
+    background-color: beige;
+    border-radius: 1rem;
+    box-shadow: 0 3px 0 #304e2b;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.dialog:hover {
+    background-color: #6a9655;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 0 #304e2b;
 }
 
 /* Level 5 */

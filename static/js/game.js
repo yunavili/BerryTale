@@ -58,6 +58,21 @@ function loadlevel(levelNumber) {
             }, {once: true})
         }
 
+        if(element.action == "ukko") {
+            gameObject.addEventListener("click", function (evt) {
+                const dialog_box = document.createElement("div");
+                dialog_box.id = "dialog-box"
+                const dialog1 = document.createElement("button");
+                const dialog2 = document.createElement("button");
+                dialog1.className = "dialog";
+                dialog2.className = "dialog";
+                dialog1.textContent = "Ask about missing boot"
+                dialog2.textContent = "Fight!"
+                dialog_box.append(dialog1, dialog2);
+                main.append(dialog_box);
+            }, {once: true})
+        }
+
         main.appendChild(gameObject); // adding the element to main
         
     };
