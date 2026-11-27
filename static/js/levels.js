@@ -87,17 +87,17 @@ const levels = {
         ]      
     },
     3: {
-        background: "../img/level1/level1_background.jpg",
+        background: "../img/level3/level3_background.png",
         elements: [
             {
                 id: "box",
-                image: "https://placehold.co/300x200",
+                image: "../img/level3/box.png",
                 alt: "box",
                 action: "box"
             },
             {
                 id: "boot",
-                image: "https://placehold.co/100x150",
+                image: "../img/level3/boot.png",
                 alt: "boot",
                 action: "boot"
             }
@@ -105,19 +105,19 @@ const levels = {
     },
 
     4: {
-        background: "../img/level1/level1_background.jpg",
+        background: "../img/level4/level4_background.png",
         elements: [
             {
                 id: "normal-bush4",
                 className: "bushes",
-                image: "../img/level1//bush1.png", // default image
+                image: "../img/level1/bush1.png", // default image
                 emptyImage: "../img/level1/bush1_empty.png", // image after click
                 alt: "bush",    
                 action: "empty"
             },
             {
                 id: "ukko",
-                image: "https://placehold.co/200x300",
+                image: "../img/level4/ukko1.png",
                 alt: "old guy",
                 action: "ukko",
             },

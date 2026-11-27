@@ -115,9 +115,17 @@ img:hover {
     left: 40%;
 }
 
+#box img {
+    width: 200px;
+}
+
 #boot {
-    top: 40%;
+    top: 70%;
     left: 25%;
+}
+
+#boot img {
+    width: 80px;
 }
 
 /* Level 4 */
@@ -130,6 +138,10 @@ img:hover {
 #ukko {
     left: 30%;
     top: 30%;
+}
+
+#ukko img {
+    width: 200px;
 }
 
 /* Level 5 */
