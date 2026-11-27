@@ -22,6 +22,10 @@ function loadlevel(levelNumber) {
 
         gameObject.appendChild(art)
 
+        if (gameObject.id == "berry-basket") {
+            art.src = check_basket_status();
+        }
+
         // add the click functions to the elements
         if (element.action == "empty"){ // actions set in levels.js
             gameObject.addEventListener("click", function (evt) {
@@ -59,6 +63,20 @@ function loadlevel(levelNumber) {
     };
 };
 
+function check_basket_status () {
+
+    if (basket_amount == 0) {
+        return "/img/basket_empty.png";  
+    } else if (basket_amount == 1) {
+        return "/img/basket_some.png";
+    } else if (basket_amount == 2) {
+        return "/img/basket_medium.png";
+    } else if (basket_amount == 3) {
+        return "/img/basket_almost_full.png";
+    } else if (basket_amount >= 3) {
+        return "/img/basket_full.png";
+    }
+}
 
 function add_to_the_basket (amount) {
     const berry_basket = document.querySelector("#berry-basket img");
