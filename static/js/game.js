@@ -78,22 +78,17 @@ function check_basket_status () {
     }
 }
 
-function add_to_the_basket (amount) {
+function add_to_the_basket () {
     const berry_basket = document.querySelector("#berry-basket img");
-    if (basket_amount == 0) { // poista korvaa check_basket_status
         basket_amount += 1;
-        berry_basket.src = "/img/basket_some.png";
-    } else if (basket_amount == 1) {
-        basket_amount += 1;
-        berry_basket.src = "/img/basket_medium.png";
-    } else if (basket_amount == 2) {
-        basket_amount += 1;
-        berry_basket.src = "/img/basket_almost_full.png";
-    } else if (basket_amount == 3) {
-        basket_amount += 1;
-        berry_basket.src = "/img/basket_full.png";
-    }
+        berry_basket.src = check_basket_status();
 };
+
+function remove_from_the_basket (amount) { 
+    const berry_basket = document.querySelector("#berry-basket img");
+        basket_amount -= amount;
+        berry_basket.src = check_basket_status();
+}
 
 
 let currentLevel = 1;
