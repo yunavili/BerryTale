@@ -54,7 +54,7 @@ const levels = {
     },
 
     2: {
-        background: "https://placehold.co/600x400",
+        background: "../img/level1/level1_background.jpg",
         elements: [
             {
                 id: "river-bush1",
@@ -83,7 +83,57 @@ const levels = {
             {
                 id: "river",
                 image: "https://placehold.co/1000x100"
+            },
+        ]      
+    },
+    3: {
+        background: "../img/level1/level1_background.jpg",
+        elements: [
+            {
+                id: "box",
+                image: "https://placehold.co/300x200",
+                alt: "box",
+                action: "box"
+            },
+            {
+                id: "boot",
+                image: "https://placehold.co/100x150",
+                alt: "boot",
+                action: "boot"
             }
         ]
+    },
+
+    4: {
+        background: "../img/level1/level1_background.jpg",
+        elements: [
+            {
+                id: "normal-bush4",
+                className: "bushes",
+                image: "../img/level1//bush1.png", // default image
+                emptyImage: "../img/level1/bush1_empty.png", // image after click
+                alt: "bush",    
+                action: "empty"
+            },
+            {
+                id: "ukko",
+                image: "https://placehold.co/200x300",
+                alt: "old guy",
+                action: "ukko",
+            },
+        ]
+    },
+    
+    5: {
+        
+        background: "../img/level1/level1_background.jpg",
+        elements: [
+            {
+                id: "gm-fight-button",
+                image: "https://placehold.co/200x100",
+                alt: "fight button",
+                action: "gm-fight-button"
+            }
+       ]
     }
 };

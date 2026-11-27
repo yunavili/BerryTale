@@ -8,6 +8,10 @@ div {
     width: fit-content;
 }
 
+img:hover {
+    transform: scale(1.1,1.1);
+}
+
 /* common elements */
 
 #sun {
@@ -33,11 +37,11 @@ div {
     content: url("../img/arrow_hover.png")
 }
 
-/* Level 1 */
-
-img:hover {
-    transform: scale(1.1,1.1);
+#berry-basket img {
+    width: 150px;
 }
+
+/* Level 1 */
 
 #normal-bush1 {
     top: 60%;
@@ -52,10 +56,6 @@ img:hover {
 #normal-bush2 {
     top: 3%;
     left: 30%;
-}
-
-#berry-basket img {
-    width: 150px;
 }
 
 #bear-bush {
@@ -107,3 +107,35 @@ img:hover {
 #river {
     top: 40%;
 }
+
+/* Level 3 */
+
+#box {
+    top: 40%;
+    left: 40%;
+}
+
+#boot {
+    top: 40%;
+    left: 25%;
+}
+
+/* Level 4 */
+
+#normal-bush4 {
+    left: 60%;
+    top: 55%;
+}
+
+#ukko {
+    left: 30%;
+    top: 30%;
+}
+
+/* Level 5 */
+
+#gm-fight-button {
+    left: 35%;
+    top: 70%;
+}
+
