@@ -128,6 +128,18 @@ img:hover {
     width: 80px;
 }
 
+/* Makes the boot go up */
+@keyframes collect {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: 
+        translateY(-430px)
+        translateX(-100px)
+    }
+}
+
 /* Level 4 */
 
 #normal-bush4 {
@@ -155,7 +167,7 @@ img:hover {
 }
 
 .dialog { 
-    width: 90%;
+    width: 230px;
     color: rgb(111, 107, 107);
     border: 3px solid #365a3b;
     background-color: beige;
@@ -173,6 +185,22 @@ img:hover {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 5px 0 #304e2b;
+}
+
+.answer {
+    position: absolute;
+    top: 3%;
+    left: 23%;
+    width: 300px;
+    height: auto;
+    color: rgb(111, 107, 107);
+    border: 3px solid #365a3b;
+    background-color: beige;
+    border-radius: 1rem;
+    box-shadow: 0 3px 0 #304e2b;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* Level 5 */

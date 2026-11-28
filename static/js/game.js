@@ -4,7 +4,6 @@
 function loadlevel(levelNumber) {
 
     const allElements = [...commonElements, ...levels[levelNumber].elements]; // from levels.js
-    const main = document.querySelector("main");
     main.innerHTML = ""; // clears the main page before creating new objects
 
     main.style.backgroundImage = `url("${levels[levelNumber].background}")`
@@ -26,8 +25,10 @@ function loadlevel(levelNumber) {
         
         gameObject.appendChild(art)
 
-        // add the click functions to the elements
-        if (element.action == "empty"){ // actions set in levels.js
+        // ****CLICK FUNCTIONS***
+        
+        // COMMON ELEMENTS
+        if (element.action == "empty"){ // make bushes be empty after click
             gameObject.addEventListener("click", function (evt) {
                 const img = gameObject.querySelector("img");
                 img.src = element.emptyImage;
@@ -35,7 +36,17 @@ function loadlevel(levelNumber) {
             }, {once: true});
         }
  
-        if (element.action == "bear") {
+
+        if (element.action == "arrow") {
+            gameObject.addEventListener("click", function (evt) {
+                currentLevel += 1;
+                loadlevel(currentLevel);
+            }, {once: true})
+        }
+
+        // LEVEL 1 ELEMENTS 
+
+       if (element.action == "bear") {
             gameObject.addEventListener("click", function (evt) {
                 const img = gameObject.querySelector("img");
                 img.src = element.emptyImage;
@@ -51,32 +62,59 @@ function loadlevel(levelNumber) {
             }, { once: true });
         } 
 
-        if (element.action == "arrow") {
+        // LEVEL 3 ELEMENTS
+
+        if (element.action == "boot") { // creates animation for the boot
             gameObject.addEventListener("click", function (evt) {
-                currentLevel += 1;
-                loadlevel(currentLevel);
+                gameObject.style.animation = "collect 0.5s forwards";
+                has_boot = true;
             }, {once: true})
         }
 
-        if(element.action == "ukko") {
-            gameObject.addEventListener("click", function (evt) {
-                const dialog_box = document.createElement("div");
-                dialog_box.id = "dialog-box"
-                const dialog1 = document.createElement("button");
-                const dialog2 = document.createElement("button");
-                dialog1.className = "dialog";
-                dialog2.className = "dialog";
-                dialog1.textContent = "Ask about missing boot"
-                dialog2.textContent = "Fight!"
-                dialog_box.append(dialog1, dialog2);
-                main.append(dialog_box);
-            }, {once: true})
+        // LEVEL 4 ELEMENTS
+
+        if(element.action == "ukko") { // creates dialog for ukko
+            gameObject.addEventListener("click", ukko_dialog, {once:true});
         }
 
         main.appendChild(gameObject); // adding the element to main
         
     };
 };
+
+function ukko_dialog (evt) {
+
+    const dialog_box = document.createElement("div");
+    dialog_box.id = "dialog-box"
+    const dialog1 = document.createElement("button");
+    const dialog2 = document.createElement("button");
+    dialog1.className = "dialog";
+    dialog2.className = "dialog";
+    dialog1.textContent = "Ask about missing boot"
+    dialog2.textContent = "Fight!"
+    dialog_box.append(dialog1, dialog2);
+    main.append(dialog_box);
+
+    dialog1.addEventListener("click", function (evt){ // dialog button, content and action changes after first click
+        if (dialog1.textContent == "Ask about missing boot") { 
+            const answer1 = document.createElement("p")
+            answer1.className = "answer";
+            answer1.textContent = "I drop my box with blueberries into the lake and my boot got stuck in the mud!";
+            main.appendChild(answer1);
+            if (has_boot) { // if player picked boot from previos level
+                dialog1.textContent = "Give the boot back";
+            } else {
+                dialog1.remove();
+            }
+        } else if (dialog1.textContent == "Give the boot back") {
+            const answer1 = document.querySelector(".answer");
+            const ukko_image = document.querySelector("#ukko img");
+            ukko_image.src = "../img/level4/ukko2.png";
+            answer1.textContent = "Thanks";
+            dialog1.remove();
+            }
+    })
+}
 
 function check_basket_status () {
 
@@ -106,6 +144,8 @@ function remove_from_the_basket (amount) {
 }
 
 
+const main = document.querySelector("main");
 let currentLevel = 1;
-let basket_amount = 0
+let basket_amount = 0;
+let has_boot = false;
 loadlevel(currentLevel);

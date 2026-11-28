@@ -118,6 +118,7 @@ const levels = {
             {
                 id: "ukko",
                 image: "../img/level4/ukko1.png",
+                image2: "../img/level4/ukko2.png",
                 alt: "old guy",
                 action: "ukko",
             },
