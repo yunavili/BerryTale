@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Berry tale - Story</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="story_style.css">
+        <script src="story.js" defer></script>
+    </head>
+    <body>
+        <main id="story-screen">
+            <div id="story-content">
+                <!-- player name will be shown using Flask -->
+                <p><span id="name-player"></span>, you woke up in the forest. 
+                The only thing you remember is that your mother asked you to bring home 10 litres of blueberries.</p>
+            </div>
+            <div id="story-footer">
+                <p id="closing-line">And so your journey begins...</p>
+                <!-- TODO: Update the link when gameplay route is confirmed -->
+                <a href="game.html" id="next-arrow">
+                    <img src="image/arrow.png" alt="Continue to game">
+                </a>
+            </div>
+        </main>
+    </body>
+</html>

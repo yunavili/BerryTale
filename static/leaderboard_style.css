@@ -1,0 +1,122 @@
+#leaderboard-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#leaderboard-screen h1 {
+    font-size: 2.2rem;
+    color: #f0f0ee;
+    background-color: #cc8b57;
+    border: 4px solid #955e3c;
+    border-radius: 1rem;
+    padding: 0.8rem 2.0rem;
+    margin: 0 0 0.8rem;
+    text-align: center;
+    text-shadow: 2px 2px 0 #774a2e;
+    box-shadow: 0 5px 0 #774a2e;
+}
+
+/* Appears at the end of the game */
+#greeting-end {
+    color: #527a46;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+}
+
+.leaderboard-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Decorate table */
+#leaderboard-screen table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 4px solid #7b4b29;
+    border-radius: 2rem;
+}
+#leaderboard-screen th {
+    background-color: #7770aa;
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+#leaderboard-screen td {
+    padding: 0.5rem;
+    text-align: center;
+    color: #385638;
+    font-weight: bold;
+}
+#leaderboard-screen tbody tr:nth-child(odd) {
+    background-color: #f7efdc;
+}
+#leaderboard-screen tbody tr:nth-child(even) {
+    background-color: #e8ddec;
+}
+#leaderboard-screen tbody tr:hover {
+    background-color: #ffe3a3;
+}
+
+/* Medal image for top 3 */
+#leaderboard-screen td img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+/* Highlight current player in top 5 */
+#leaderboard-screen tbody tr.current-player {
+    background-color: #ffe3a3;
+    outline: 2px solid #d49b00;
+    outline-offset: -2px;
+}
+
+/* Player's result panel */
+#result-section {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #fff3d6;
+    border: 3px solid #b17f47;
+    border-radius: 1rem;
+
+    text-align: center;
+    box-shadow: 0 4px 0 #d1b287;
+}
+
+#result-section h2 {
+    color: #80512f;
+    font-size: 1.0rem;
+    margin: 0 0 0.4rem;
+}
+
+#player-result {
+    color: #527a46;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Close button at the top right of the main-screen */
+#close-ldboard {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+#close-ldboard img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+#close-ldboard:hover img {
+    transform: rotate(12deg) scale(1.1);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leader Board</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="leaderboard_style.css">
+    </head>
+    <body>
+        <main id="leaderboard-screen">
+            <h1>LEADER BOARD <img style="width: 50px; height: 50px;" src="image/trophy-star.png" alt="trophy-star"></h1>
+            
+            <!-- Just show at the end of the game -->
+            <p id="greeting-end" hidden>Thank you for playing!</p>
+
+            <div class="leaderboard-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">                
+                    </tbody>
+                </table>
+
+                <!-- Show player's position when the player is outside the top 5 -->
+                <section id="result-section" hidden>
+                    <h2>YOUR RESULT</h2>
+                    <p id="player-result"></p>  
+                </section>
+
+                <a href="index.html" id="close-ldboard">
+                    <img src="image/close-btn.png" alt="close Leaderboard">
+                </a>
+            </div>
+        </main>
+    </body>
+</html>
